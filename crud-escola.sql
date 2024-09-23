@@ -10,7 +10,9 @@ materia varchar(45)
 );
 
 create table aulas(
-id_aula INT not null  primary key auto_increment
+id_aula INT not null  primary key auto_increment,
+numero_sala char(2),
+tipo_sala varchar(50)
 );
 
 create table diario(
