@@ -32,12 +32,11 @@ $result = $conn-> query($sql);
                 <td><?php echo $row['data_nascimento']?></td>
                 <td><?php echo $row['CPF']?></td>
                 <td><?php echo$row['materia']?></td>
-                <td>Ações</td>
                 <td>
-                    <a href= "delete.php? id_professor=<?php $row['id_professor']?>">Excluir</a>
-                    <a href="update_professor.php?id_professor=<?php $row['id_professor']?>">Editar</a>
+                    <a href= "delete.php? id_professor=<?php echo $row['id_professor']?>">Excluir</a>
+                    <a href="update_professor.php?id_professor=<?php echo $row['id_professor']?>">Editar</a>
                 </td>
-            </tr>";
+            </tr>
         <?php } ?>
     </table>
     <p>Acessar os outros Read</p>

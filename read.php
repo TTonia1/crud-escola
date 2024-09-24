@@ -38,23 +38,22 @@ $result = $conn-> query($sql);
     <?php while($row = $result-> fetch_assoc()){
         ?>
         <tr>
-                <td><?php echo$row['id_diario']?></td>
+                <td><?php echo $row['id_diario']?></td>
                 <td><?php echo $row['hora_aula']?></td>
-                <td><?php echo$row['turma']?></td>
-                <td><?php echo$row['id_professor']?></td>
+                <td><?php echo $row['turma']?></td>
+                <td><?php echo $row['id_professor']?></td>
                 <td><?php echo $row['nome_professor']?></td>
                 <td><?php echo $row['data_nascimento']?></td>
                 <td><?php echo $row['CPF']?></td>
-                <td><?php echo$row['materia']?></td>
-                <td><?php echo$row['id_aula']?></td>
-                <td><?php echo$row['numero_sala']?></td>
-                <td><?php echo$row['tipo_sala']?></td>
-                <td>Ações</td>
+                <td><?php echo $row['materia']?></td>
+                <td><?php echo $row['id_aula']?></td>
+                <td><?php echo $row['numero_sala']?></td>
+                <td><?php echo $row['tipo_sala']?></td>
                 <td>
-                    <a href= "delete_diario.php? id_diario=<?php $row['id_diario']?>">Excluir</a>
-                    <a href="update_diario.php?id_diario=<?php $row['id_diario']?>">Editar</a>
+                    <a href= "delete_diario.php?id_diario=<?php echo $row['id_diario']?>">Excluir</a>
+                    <a href="update_diario.php?id_diario=<?php echo $row['id_diario']?>">Editar</a>
                 </td>
-            </tr>";
+            </tr>
         <?php } ?>
     </table>
     <p>Acessar os outros Read</p>
