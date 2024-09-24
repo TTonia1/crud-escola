@@ -11,7 +11,7 @@ materia varchar(45)
 
 create table aulas(
 id_aula INT not null  primary key auto_increment,
-numero_sala char(2),
+numero_sala char(3),
 tipo_sala varchar(50)
 );
 
