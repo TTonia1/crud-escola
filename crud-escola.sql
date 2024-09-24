@@ -17,7 +17,7 @@ tipo_sala varchar(50)
 
 create table diario(
 id_diario INT not null  primary key auto_increment,
-hora_aula datetime,
+hora_aula time,
 turma varchar(45),
 id_professor INT NOT NULL,
 FOREIGN KEY (id_professor) REFERENCES professor(id_professor),
