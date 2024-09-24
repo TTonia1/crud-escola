@@ -11,7 +11,7 @@ materia varchar(45)
 
 create table aulas(
 id_aula INT not null  primary key auto_increment,
-numero_sala char(3),
+numero_sala char(2),
 tipo_sala varchar(50)
 );
 
@@ -20,7 +20,8 @@ id_diario INT not null  primary key auto_increment,
 hora_aula time,
 turma varchar(45),
 id_professor INT NOT NULL,
-FOREIGN KEY (id_professor) REFERENCES professor(id_professor),
+FOREIGN KEY (id_professor) REFERENCES professor(id_professor)
+ON UPDATE CASCADE,
 id_aula INT NOT NULL,
-FOREIGN KEY (id_aula) REFERENCES aulas(id_aula)
+FOREIGN KEY (id_aula) REFERENCES aulas(id_aula) ON UPDATE CASCADE
 );
